@@ -1,0 +1,43 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+<body class="body-login">
+    {% load crispy_forms_tags %}
+    <div class="wrapper">
+        <div class="container main">
+            <div class="row registro-row">
+                <div class="col-md-6 side-image-registro">
+                           
+                    <!-------------      image     ------------->
+                    <div class="text">
+                        <h1 class="h1-login-2">¿Ya tienes una cuenta?</h1>
+                        <p class="p-login">INICIA SESIÓN PARA DISFRUTAR DE LOS BENEFICIOS QUE RINCÓN NUTRITIVO TIENE PARA TI</p>
+                        <div class="input-field">
+                            <a href="{% url 'login' %}" class="btn btn-registro mt-2">INICIAR SESIÓN</a>
+                        </div>
+                    </div>
+                    
+                </div>
+                <div class="col-md-6 right">
+                    
+                    <div class="input-box">
+                        <img src="{% static 'app/img/Iconos/Logo-V.png' %}" alt="" class="logo-login">
+                        <h1 class="h1-login mt-2">RINCON NUTRITIVO</h1>
+                        <header class="header-login mt-2">CREA TU CUENTA</header>
+                        <form action="" method="post">
+                           
+                            {% csrf_token %}
+                            {{ form | crispy }}
+
+
+                            <div class="input-field">
+                                <input type="submit" value="REGISTRATE" class="btn btn-registro mt-2">
+                            </div> 
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+{% endblock contenido %}

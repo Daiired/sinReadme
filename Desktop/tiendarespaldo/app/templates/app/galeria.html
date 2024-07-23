@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Detalle del Producto</title>
+    <!-- Incluye Chart.js desde la CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chart.js@4.2.1/dist/chart.umd.min.js"></script>
+    <!-- Incluye Chart.js Plugin Datalabels desde la CDN -->
+    <script src="https://cdn.jsdelivr.net/npm/chartjs-plugin-datalabels@2.0.0"></script>
+    <style>
+        /* Ajusta el tamaño del canvas aquí */
+        #chart {
+            max-width: 400px;
+            max-height: 400px;
+            width: 100%;
+            height: auto;
+        }
+    </style>
+</head>
+<body>
+    <canvas id="chart"></canvas>
+    <script>
+        let ctx = document.getElementById("chart").getContext("2d");
+
+        let chart = new Chart(ctx, {
+            type: "pie",
+            data: {
+                labels: ["Proteínas", "Carbohidratos", "Grasas", "Energia"],
+                datasets: [
+                    {
+                        label: "Gross volume ($)",
+                        backgroundColor: ["#79AEC8", "#A8D0E6", "#B3CDE0", "#D4E6F1"],
+                        borderColor: "#ffffff",
+                        data: [26900, 28700, 27300, 29200]
+                    }
+                ]
+            },
+            options: {
+                plugins: {
+                    datalabels: {
+                        formatter: (value, context) => {
+                            let sum = 0;
+                            let dataArr = context.chart.data.datasets[0].data;
+                            dataArr.map(data => {
+                                sum += data;
+                            });
+                            let percentage = (value * 100 / sum).toFixed(2) + "%";
+                            return percentage;
+                        },
+                        color: '#ffffff',
+                        font: {
+                            weight: 'bold',
+                            size: 14
+                        }
+                    }
+                },
+                title: {
+                    text: "Gross Volume in 2020",
+                    display: true
+                }
+            },
+            plugins: [ChartDataLabels]
+        });
+    </script>
+</body>
+</html>

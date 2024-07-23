@@ -1,0 +1,70 @@
+{% extends 'app/base.html' %}
+
+{% block js%}
+    <script>
+        function eliminarDieta(id){
+            Swal.fire({
+                "title": "¿Estas seguro?",
+                "text": "esta acción no se puede deshacer",
+                "icon":"question",
+                "showCancelButton": true,
+                "CancelButtonText": "No, Cancelar",
+                "confirmButtonText": "Si, Eliminar",
+                "reverseButtons": true,
+                "confirmButtonColor": "#dc3545"
+            })
+            .then(function(result){
+                if(result.isConfirmed) {
+                    window.location.href="/eliminar-dieta/"+id+"/"
+                }
+            })
+        }
+    </script>
+{% endblock%}
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+{% load humanize %}
+<br><br><br>
+<div class="card">
+    <div class="card-body">
+        <h2>Listado de Dietas</h2>
+        <hr>
+
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th>Id</th>
+                <th>Nombre Dieta</th>
+                <th>Opciones</th>
+            </tr>
+        
+            {% for d in entity %}
+        
+            <tr>
+                <td>{{ d.id | title }}</td>
+                <td>{{ d.nombre| title }}</td>
+
+                <td>
+                    {% if perms.app.change_categoria_alimento %}
+                    <a href="{% url 'modificar_dieta' d.id %}" class="btn btn-info btn-sm">Modificar</a>
+                    {% endif %}
+                    {%if perms.app.delete_categoria_alimento %}
+                    <a href="#" onclick="eliminarDieta({{ d.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+                    {% endif %}
+                </td>
+
+
+            </tr>
+            {%  endfor %}
+        </table>
+        <hr>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
+        
+    </div>
+</div>
+
+
+{%  endblock %}

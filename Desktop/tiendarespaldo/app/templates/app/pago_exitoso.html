@@ -1,0 +1,32 @@
+{% extends 'app/base.html' %}
+
+{% block contenido %}
+<div class="container mt-4">
+    <h1 class="titulo-detalle">Detalles del Pedido</h1>
+    <table class="table table-bordered table-white">
+        <tbody>
+            <tr>
+                <th>ID del Pedido</th>
+                <td>{{ pedido.id }}</td>
+            </tr>
+            <tr>
+                <th>Fecha</th>
+                <td>{{ pedido.fecha }}</td>
+            </tr>
+            <tr>
+                <th>Total</th>
+                <td>${{ pedido.total }}</td>
+            </tr>
+        </tbody>
+    </table>
+    <h2 class="titulo-detalle">Items del Pedido</h2>
+    <ul class="list-group mb-4">
+        {% for item in items %}
+        <li class="list-group-item">
+            {{ item.cantidad }} x {{ item.alimento.nombre_alimento }} - ${{ item.precio }}
+        </li>
+        {% endfor %}
+    </ul>
+    <a class="btn-home" href="{% url 'home' %}">Volver al inicio</a>
+</div>
+{% endblock %}

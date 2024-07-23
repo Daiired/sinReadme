@@ -1,0 +1,75 @@
+{% extends 'app/base.html' %}
+
+{% block js%}
+    <script>
+        function eliminarAlimento(id){
+            Swal.fire({
+                "title": "¿Estas seguro?",
+                "text": "esta acción no se puede deshacer",
+                "icon":"question",
+                "showCancelButton": true,
+                "CancelButtonText": "No, Cancelar",
+                "confirmButtonText": "Si, Eliminar",
+                "reverseButtons": true,
+                "confirmButtonColor": "#dc3545"
+            })
+            .then(function(result){
+                if(result.isConfirmed) {
+                    window.location.href="/eliminar-alimento/"+id+"/"
+                }
+            })
+        }
+    </script>
+{% endblock%}
+
+{% block contenido %}
+
+{% load crispy_forms_tags %}
+{% load humanize %}
+<br><br><br>
+<div class="card">
+    <div class="card-body">
+        <h2>Listado de Alimentos</h2>
+        <hr>
+
+        <table class="table table-striped table-hover table-responsive-sm">
+            <tr>
+                <th>Nombre</th>
+                <th>Precio</th>
+                <th>Categoria</th>
+                <th>Opciones</th>
+            </tr>
+        
+            {% for a in entity %}
+        
+            <tr>
+                <td>{{ a.nombre_alimento | title }}</td>
+                <td>${{ a.precio | intcomma }}</td>
+                <td>{{ a.id_categoria | title}}</td>
+
+                <td>
+                    {% if perms.app.change_alimento %}
+                    <a href="{% url 'modificar_alimento' a.id %}" class="btn btn-info btn-sm">Modificar</a>
+                    {% endif %}
+                    {%if perms.app.delete_alimento %}
+                    <a href="#" onclick="eliminarAlimento({{ a.id }})" class="btn btn-danger btn-sm">Eliminar</a>
+                    {% endif %}
+                </td>
+
+
+            </tr>
+            {%  endfor %}
+        </table>
+        <hr>
+        <div>
+            {% include 'app/paginator.html' %}
+        </div>
+        
+    </div>
+</div>
+
+
+
+
+
+{%  endblock %}

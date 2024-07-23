@@ -1,0 +1,865 @@
+@import url('https://fonts.googleapis.com/css2?family=Bona+Nova:ital,wght@0,400;0,700;1,400&family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+/* -------------- Base --------------*/
+.body-base{
+    margin: 0;
+    background-color: #FEFAE0;
+    font-family: "Montserrat", sans-serif;
+}
+
+.navbar{
+    background-color: #3A5A40;
+}
+
+.navbar-brand{
+    font-family: "Bona Nova", serif;
+    font-weight: 700;
+}
+
+.nav-link{
+    font-family: "Bona Nova", serif;
+}
+
+footer {
+    position: relative;
+    bottom: 0;
+    width: 100%;
+    background-color: #3A5A40;
+    height: 56px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+footer i {
+    margin: 0 10px;
+}
+
+
+/* -------------- Index --------------*/
+.body-index{
+    box-sizing: border-box;
+    font-size: 18px;
+}
+
+/* Banner-Index */
+#hero{
+    width: 100%;
+    height: 100vh;
+    background: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.233)), url('../img/Banner/Banner.jpg') no-repeat center / cover;
+    color: white;
+    background-position: top;
+    max-height: 700px;
+    overflow: hidden;
+}
+
+.h1-index{
+    font-family: "Bona Nova", serif;
+}
+
+.container-index {
+    width: 90%;
+    height: 100%;
+    max-width: 1000px;
+    margin: 0 50px 0 auto;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+}
+
+
+.container-index .info .h1-index{
+    font-size: 4rem;
+}
+
+.container-index .info .p-index-decoration{
+    font-size: 2rem;
+}
+
+.container-index .info .h2-index{
+    font-size: 1.2rem;
+    margin-bottom: 2rem;
+    max-width: 370px;
+    margin: 0 auto;
+}
+
+.container-index .info .btn-login{
+    text-decoration: none;
+    display: inline-block;
+    background: linear-gradient(rgba(0, 0, 0, 0.521), rgba(0, 0, 0, 0.308));
+    border: 2px solid #3A5A40;
+    font-size: 1.4rem;
+    padding: 0.5em 2em;
+    margin-top: 2rem;
+    color: white;
+    font-weight: 600;
+}
+
+.container-index .info .p-index{
+    font-size: 1.2rem;
+}
+
+.container-index .info .p-index a{
+    text-decoration: none;
+    color: white;
+    font-weight: 600;
+}
+
+
+/* Index-bottom */
+.index-bottom {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    height: 100vh;
+    max-height: 180px;
+    margin-bottom: 100px;
+}
+
+.h1-index-bottom {
+    font-family: "Bona Nova", serif;
+    color: #3A5A40;
+    text-align: center;
+}
+
+.p-index-decoration-v{
+    color: #3A5A40;
+    margin-bottom: 20px;
+}
+
+.container-columns {
+    display: flex;
+    width: 100%;
+    max-width: 1000px;
+    justify-content: space-between;
+    gap: 20px;
+    color: #463F3A;
+    font-size: 20px;
+    font-weight: 600
+}
+
+.column {
+    width: 48%;
+}
+
+.content-column {
+    list-style-type: disc;
+    margin-left: 20px;
+}
+
+@media only screen and (max-width: 768px){
+    .body-index{
+        font-size: 10px;
+    }
+    .container-index{
+        margin: 0 auto;
+    }
+    .container-columns{
+        font-size: 16px;
+    }
+    .container-index .info .p-index-decoration img{
+        display: none;
+    }
+
+    .navbar-brand {
+        display: flex;
+        align-items: center;
+    }
+
+    .navbar-brand img {
+        display: none;
+    }
+
+    .navbar-toggler {
+        margin-left: auto;
+    }
+    
+    .navbar-nav {
+        text-align: center;
+    }
+    
+    .nav-item {
+        margin: 0.5rem 0;
+    }
+}
+
+
+
+
+/* -------------- Login -------------- */
+.body-login {
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    height: 100vh;
+}
+
+.wrapper {
+    padding: 0 20px 0 20px;
+}
+
+.main {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+}
+
+.h1-login {
+    font-size: 1.5rem;
+    font-family: "Bona Nova", serif;
+    font-weight: 700;
+    color: #3A5A40;
+}
+
+.side-image-contacto {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.233)), url("../img/Banner/Contacto.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.side-image-registro {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.233)), url("../img/Banner/Registro.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 10px 0 0 10px;
+    position: relative;
+}
+
+.side-image-login {
+    background-image: linear-gradient(rgba(0, 0, 0, 0.329), rgba(0, 0, 0, 0.233)), url("../img/Banner/Login.jpg");
+    background-position: center;
+    background-size: cover;
+    background-repeat: no-repeat;
+    border-radius: 0 10px 10px 0;
+    position: relative;
+}
+
+.registro-row {
+    margin-top: 100px;
+    margin-bottom: 100px;
+    width: 900px;
+    min-height: 100%;
+    border-radius: 10px;
+    background: #fff;
+    padding: 0px;
+    box-shadow: 5px 5px 10px 1px rgba(0, 0, 0, 0.2);
+}
+
+.text {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    text-align: center;
+    width: 90%; 
+}
+
+.h1-login-2 {
+    font-size: 30px;
+    color: #fff;
+    white-space: nowrap; 
+    overflow: hidden;
+    text-overflow: ellipsis; 
+}
+
+.p-login {
+    font-weight: 500;
+    font-size: 14px;
+    color: #fff;
+}
+
+.right {
+    margin-top: 50px;
+    margin-bottom: 50px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+}
+
+.input-box {
+    width: 330px;
+    box-sizing: border-box;
+    text-align: center;
+}
+
+.input-box .logo-login {
+    display: block;
+    margin: 0 auto;
+    width: 70px;
+    height: 70px;
+}
+
+.input-box .header-login {
+    color: #463F3A;
+    font-weight: 700;
+    text-align: center;
+    margin-bottom: 45px;
+}
+
+.input-field {
+    display: flex;
+    flex-direction: column;
+    position: relative;
+    padding: 0 10px 0 10px;
+}
+
+.input {
+    height: 45px;
+    width: 100%;
+    background: transparent;
+    border: none;
+    border-bottom: 1px solid rgba(0, 0, 0, 0.2);
+    outline: none;
+    margin-bottom: 20px;
+    color: #40414a;
+}
+
+.input-box .input-field label {
+    position: absolute;
+    top: 10px;
+    left: 10px;
+    pointer-events: none;
+    transition: .5s;
+}
+
+.submit-login {
+    border: none;
+    outline: none;
+    height: 45px;
+    background: #3A5A40;
+    border-radius: 25px;
+    transition: .4s;
+    color: #fff;
+    font-weight: 500;
+}
+
+.submit-login:hover {
+    background: #588157;
+    color: #fff;
+}
+
+.a-login {
+    text-decoration: none;
+    color: #463F3A;
+    font-weight: 600;
+    font-size: 10px;
+}
+
+.a-login:hover {
+    color: #BC6C25;
+}
+
+.btn-registro {
+    display: inline-block;
+    text-align: center;
+    background: #3A5A40;
+    color: #fff;
+    padding: 10px 20px;
+    border-radius: 25px;
+    text-decoration: none;
+    transition: .4s;
+}
+
+.btn-registro:hover {
+    background: #588157;
+    color: #fff;
+}
+
+@media only screen and (max-width: 768px) {
+    .side-image {
+        border-radius: 10px 10px 0 0;
+    }
+
+    img {
+        width: 35px;
+        position: absolute;
+        top: 20px;
+        left: 47%;
+    }
+
+    .text {
+        position: absolute;
+        top: 70%;
+        text-align: center;
+        width: 90%;
+    }
+
+    .text p, i {
+        font-size: 16px;
+    }
+
+    .registro-row {
+        max-width: 420px;
+        width: 100%;
+    }
+}
+
+/* -------------- Contacto -------------- */
+.h1-contacto{
+    font-family: "Bona Nova", serif;
+    color: #fff;
+}
+
+.span-contacto{
+    font-weight: 500;
+    color: #fff;
+}
+
+/* -------------- Home -------------- */
+.welcome-container {
+    margin-top: 20px;
+    padding: 0 20px; /* Ajusta el padding para que el contenido no quede pegado a los bordes */
+}
+
+.welcome-message {
+    margin-top: 20px;
+    margin-left: 20px;
+    font-size: 24px;
+    font-weight: 600;
+    color: #463F3A;
+    margin-bottom: 10px; /* Espacio entre el mensaje y la pregunta */
+    text-align: left; /
+}
+
+.welcome-question {
+    font-size: 36px; /* Tamaño de fuente más grande */
+    font-weight: 600;
+    color: #463F3A;
+    text-align: center; /* Centra el texto */
+}
+
+
+.category {
+    margin-top: 50px;
+    margin-bottom: 30px;
+}
+
+.category-item-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    overflow: auto hidden;
+    scroll-snap-type: inline mandatory;
+    overscroll-behavior-inline: contain;
+}
+
+.category-item {
+    background-color: #fff;
+    display: flex;
+    align-items: stretch;
+    gap: 10px;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    scroll-snap-align: start;
+    max-width: 40%;
+    position: relative;
+    height: 160px; /* Ajusta según sea necesario */
+    padding-right: 12px;
+}
+
+.category-img-box {
+    border-radius: 8px;
+    flex-shrink: 0;
+    width: 100px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.category-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border-radius: 8px 0 0 8px;
+}
+
+.category-content-box {
+    width: 100%;
+    overflow: hidden; /* Oculta cualquier contenido desbordado */
+}
+
+.category-content-flex {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    align-items: flex-start;
+    margin-bottom: 10px;
+    flex-grow: 1;
+    position: relative;
+    max-height: 100%; /* Asegura que no exceda la altura del contenedor */
+}
+
+.category-item-title {
+    margin-top: 20px;
+    font-family: Bona Nova;
+    color: #3A5A40;
+    font-size: 18px;
+    font-weight: 600;
+    text-transform: uppercase;
+}
+
+.category-item-amount {
+    color: #463F3A;
+    font-size: 16px;
+    font-weight: 600;
+    position: relative;
+    margin-bottom: 10px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    width: 100%;
+}
+
+.category-item-amount a {
+    color: inherit; /* Mantiene el color del enlace igual al texto */
+    text-decoration: none; /* Elimina el subrayado del enlace */
+}
+
+.category-item-amount:first-of-type::after {
+    content: "";
+    position: absolute;
+    bottom: -5px;
+    left: -100px; /* Ajusta para que la línea comience desde el borde izquierdo del contenedor */
+    width: calc(100% + 100px + 12px); /* Ajusta el ancho sumando el ancho de la imagen y el padding del contenedor */
+    height: 1px;
+    background-color: #E6E6E6;
+    z-index: 1; /* Asegura que la línea esté por encima de otros elementos */
+}
+/* Filtro */
+.filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filtro-avanzado {
+    display: flex; /* Para alinear los elementos hijos en una fila */
+    gap: 20px; /* Espacio entre los filtros */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filtro-avanzado fieldset {
+    margin: 0; /* Elimina el margen predeterminado del fieldset */
+    padding: 0; /* Elimina el padding del fieldset */
+    border: none; /* Elimina el borde predeterminado del fieldset */
+    flex: 1; /* Asegura que cada fieldset ocupe el mismo ancho */
+}
+
+.filtro-categorias {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filtro-fieldset-categorias {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    gap: 5px; /* Espacio entre los enlaces */
+    margin-bottom: 20px; /* Espacio debajo del campo de categoría */
+}
+
+.categoria-link {
+    display: block;
+    padding: 10px;
+    color: #3A5A40;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #E6E6E6;
+}
+
+.categoria-link:hover {
+    background-color: #D4D4D4;
+}
+/* Contenedor de botones */
+.filtro-botones {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px;
+    align-items: center; /* Alinea verticalmente los botones */
+}
+
+/* Botón de filtrar */
+.btn-home {
+    padding: 8px 16px;  /* Ajusta el padding para la altura deseada */
+    border: none;
+    background-color: #3A5A40;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+/* Botón de limpiar */
+.btn-home-clear {
+    padding: 8px 16px;  /* Ajusta el padding para la altura deseada */
+    border: none;
+    background-color: #E6E6E6;
+    color: #3A5A40;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-icon {
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: auto;
+    height: auto;
+}
+
+.btn-icon i {
+    font-size: 16px;
+    color: #fff; 
+}
+
+.btn-icon:hover {
+    background-color: #b1b1b1; /* Cambia el color de fondo al pasar el ratón si es necesario */
+    color: #588157;
+}
+
+.card-img-top {
+    height: 300px; 
+    object-fit: cover; 
+
+}
+.productos-contenedor {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+.productos {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+.producto {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+}
+
+.col-md-4 {
+    flex: 1 1 calc(33.333% - 20px); 
+    max-width: calc(33.333% - 20px); 
+}
+
+.card {
+    display: flex;
+    flex-direction: column;
+    height: 100%; 
+    width: 100%;
+    border: 1px solid #E6E6E6;
+    border-radius: 8px;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    overflow: hidden;
+    background-color: #fff;
+}
+
+.titulo-producto{
+    font-family: Bona Nova;
+    color: #3A5A40;
+    font-weight: 700;
+    font-size: 36px;
+}
+
+.advanced-search {
+    width: 400px;
+    float: left;
+    margin-right: 20px;
+}
+
+.advanced-search h2 {
+    font-size: 24px;
+    color: #3A5A40;
+    margin-bottom: 20px;
+}
+
+.advanced-search-bar {
+    margin-bottom: 20px;
+}
+
+.advanced-search-filters {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.card-img-top {
+    height: 400px; /* Ajusta la altura según sea necesario */
+    object-fit: cover; /* Asegura que la imagen cubra toda la tarjeta */
+
+}
+
+
+.filtro {
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+}
+
+.filtro-avanzado {
+    display: flex; /* Para alinear los elementos hijos en una fila */
+    gap: 20px; /* Espacio entre los filtros */
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filtro-avanzado fieldset {
+    margin: 0; /* Elimina el margen predeterminado del fieldset */
+    padding: 0; /* Elimina el padding del fieldset */
+    border: none; /* Elimina el borde predeterminado del fieldset */
+    flex: 1; /* Asegura que cada fieldset ocupe el mismo ancho */
+}
+
+.filtro-categorias {
+    background-color: #f9f9f9;
+    padding: 15px;
+    border-radius: 8px;
+}
+
+.filtro-fieldset-categorias {
+    display: flex;
+    flex-direction: column; /* Organiza los elementos en una columna */
+    gap: 5px; /* Espacio entre los enlaces */
+    margin-bottom: 20px; /* Espacio debajo del campo de categoría */
+}
+
+.categoria-link {
+    display: block;
+    padding: 10px;
+    color: #3A5A40;
+    text-decoration: none;
+    font-size: 16px;
+    border-radius: 5px;
+    background-color: #E6E6E6;
+}
+
+.categoria-link:hover {
+    background-color: #D4D4D4;
+}
+
+.btn-home {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #3A5A40;
+    color: #fff;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.btn-home-clear {
+    margin-top: 10px;
+    padding: 10px 20px;
+    border: none;
+    background-color: #E6E6E6;
+    color: #3A5A40;
+    font-size: 16px;
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.filtro-botones {
+    display: flex;
+    gap: 10px; /* Espacio entre los botones */
+    margin-top: 10px;
+}
+
+.card-title, .card-text{
+    font-weight: 600;
+    color: #463F3A;
+}
+
+a {
+    text-decoration: none; /* Elimina la línea de abajo de los enlaces */
+}
+
+.card-info-icon a{
+    position: absolute; 
+    bottom: 10px; 
+    right: 10px; 
+    font-size: 24px; 
+    color: #3A5A40; 
+    cursor: pointer; 
+}
+
+
+.grafico-nutricional {
+    max-width: 300px;
+    margin: 0 auto;
+}
+#nutritionChart {
+    width: 100% !important;
+    height: auto !important;
+}
+
+
+#nutritionChart {
+    max-width: 400px;
+    max-height: 400px;
+    width: 100%;
+    height: auto;
+}
+
+.contenido-principal {
+    display: flex;
+    justify-content: space-between;
+    gap: 20px;
+}
+
+.descripcion-producto {
+    flex: 1;
+}
+
+.detalles-derecha {
+    flex: 1;
+    max-width: 400px; 
+}
+
+.dietas-compatibles, .restricciones-alimentarias, .grafico-nutricional {
+    margin-bottom: 20px;
+}
+
+.grafico-nutricional {
+    display: flex;
+    flex-direction: column; 
+    align-items: center; 
+}
+
+.detalles h1, h2{
+    color: #463F3A;
+    font-weight: 600;
+}
+
+.detalles h3, .dietas-compatibles h2, .restricciones-alimentarias h2, .grafico-nutricional h2, .titulo-carrito, .titulo-detalle{
+    font-family: Bona Nova;
+    font-weight: 700;
+    color: #3A5A40;
+}
+
+.contenedor-img-producto, .titulo-carrito{
+    margin-top: 20px;
+}
+
+.table-custom {
+    background-color: #ffffff; /* Fondo blanco para la tabla */
+}

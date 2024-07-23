@@ -1,0 +1,7 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
+<h1>Error en el Pago</h1>
+<p>Ocurrió un error al procesar el pago. Por favor, inténtelo de nuevo más tarde.</p>
+<p>Detalles del error: {{ error }}</p>
+<a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock %}

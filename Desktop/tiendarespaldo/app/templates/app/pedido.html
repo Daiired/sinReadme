@@ -1,0 +1,13 @@
+{% extends 'app/base.html' %}
+{% block contenido %}
+<h1>Detalles del Pedido</h1>
+<p>ID del Pedido: {{ pedido.id }}</p>
+<p>Fecha: {{ pedido.fecha }}</p>
+<p>Total: ${{ pedido.total }}</p>
+<ul>
+    {% for item in items %}
+    <li>{{ item.cantidad }} x {{ item.alimento.nombre_alimento }} - ${{ item.precio }}</li>
+    {% endfor %}
+</ul>
+<a href="{% url 'home' %}">Volver al inicio</a>
+{% endblock %}

@@ -1,0 +1,37 @@
+{% extends 'app/base.html' %}
+{% load static %}
+{% block contenido %}
+<body class="body-index">
+    <section id="hero">
+        <div class="container-index">
+            <div class="info">
+                <h1 class="h1-index">RINCÓN NUTRITIVO</h1>
+                <p class="p-index-decoration">━━━━━ <img src="{% static 'app/img/Iconos/almendra-B.png' %}"  width="40" height="40" alt=""> ━━━━━</p>
+                <h2 class="h2-index">Comienza tu camino de vida saludable junto a nosotros</h2>
+                <a class="btn-login" href="{% url 'login' %}">INICIAR SESIÓN</a>
+                <p class="p-index mt-2">¿No tienes una cuenta? <a href="{% url 'registro' %}"><u>Regístrate</u></a></p>
+            </div>
+        </div>
+    </section>
+
+    <div class="index-bottom">
+        <h1 class="h1-index-bottom mt-3">AQUÍ PODRÁS:</h1>
+        <p class="p-index-decoration-v">━━━━━ <img src="{% static 'app/img/Iconos/almendra.png' %}"  width="30" height="30" alt=""> ━━━━━</p>
+        <div class="container-columns">
+            <div class="column">
+                <ul class="content-column">
+                    <li>Comprar tus alimentos</li>
+                    <li>Obtener información nutricional clara y sencilla de cada producto</li>
+                </ul>
+            </div>
+            <div class="column">
+                <ul class="content-column">
+                    <li>Representación gráfica de la información nutricional</li>
+                    <li>Aplicar filtros de búsqueda avanzada para clasificar los alimentos según tus necesidades nutricionales</li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+</body>
+{% endblock contenido %}
